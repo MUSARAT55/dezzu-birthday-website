@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday Dezzu 💖</title>
+
+
+    <!-- GOOGLE FONTS -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+
+    <!-- CSS -->
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+
+<body>
+
+
+    <!-- BACKGROUND EFFECTS -->
+
+    <div id="hearts"></div>
+
+    <canvas id="fireworks"></canvas>
+
+
+    <!-- =================================
+         HERO SECTION
+    ================================== -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+
+            <p class="small-title">
+
+                ✨ A Special Day Is Coming ✨
+
+            </p>
+
+
+            <h1>
+
+                Happy Birthday
+
+                <span>Dezzu</span>
+
+                🎂💖
+
+            </h1>
+
+
+            <p class="subtitle">
+
+                Today is not just another day...
+
+                It is the day a very special person
+                came into this world 💕✨
+
+            </p>
+
+
+            <!-- BIRTHDAY WISH -->
+
+            <div class="birthday-wish">
+
+                <p>
+
+                    May your birthday be filled with
+                    endless happiness, beautiful smiles,
+                    unforgettable memories and all the
+                    love your heart deserves 💖✨
+
+                </p>
+
+
+                <p>
+
+                    You are truly special,
+
+                    and you deserve all the happiness
+                    in the world 🥰💕
+
+                </p>
+
+            </div>
+
+
+            <!-- COUNTDOWN -->
+
+            <div class="countdown">
+
+
+                <div class="time-box">
+
+                    <span id="days">00</span>
+
+                    <small>Days</small>
+
+                </div>
+
+
+                <div class="time-box">
+
+                    <span id="hours">00</span>
+
+                    <small>Hours</small>
+
+                </div>
+
+
+                <div class="time-box">
+
+                    <span id="minutes">00</span>
+
+                    <small>Minutes</small>
+
+                </div>
+
+
+                <div class="time-box">
+
+                    <span id="seconds">00</span>
+
+                    <small>Seconds</small>
+
+                </div>
+
+
+            </div>
+
+
+            <!-- MUSIC BUTTON -->
+
+            <button id="musicBtn"
+                    class="main-btn"
+                    onclick="toggleMusic()">
+
+                🎵 Play Birthday Music
+
+            </button>
+
+
+            <!-- MEMORIES BUTTON -->
+
+            <button id="memoriesBtn"
+                    class="main-btn memories-btn">
+
+                💖 Click to Open Your Memories 💖
+
+            </button>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =================================
+         MEMORIES SECTION
+    ================================== -->
+
+    <section class="memories-section"
+             id="memoriesSection">
+
+
+        <div class="section-title">
+
+
+            <div class="top-hearts">
+
+                💖 💕 💗 💘 💖
+
+            </div>
+
+
+            <h2>
+
+                Our Beautiful Memories 💖
+
+            </h2>
+
+
+            <p>
+
+                Every picture holds a special memory ✨
+
+            </p>
+
+
+        </div>
+
+
+        <!-- PHOTOS HIDDEN INITIALLY -->
+
+        <div class="photo-grid"
+             id="photoGrid">
+
+
+            <!-- PHOTO 1 -->
+
+            <div class="photo-card">
+
+
+                <img
+                    src="{{ url_for('static', filename='images/photo1.jpeg') }}"
+                    alt="Memory 1"
+                >
+
+
+                <div class="memory-text">
+
+
+                    <h3>
+
+                        Our Cute Memory 🐱💖
+
+                    </h3>
+
+
+                    <p>
+
+                        A little moment,
+                        but a beautiful memory forever ✨
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+            <!-- PHOTO 2 -->
+
+            <div class="photo-card">
+
+
+                <img
+                    src="{{ url_for('static', filename='images/photo2.jpeg') }}"
+                    alt="Memory 2"
+                >
+
+
+                <div class="memory-text">
+
+
+                    <h3>
+
+                        Special Memory 💕
+
+                    </h3>
+
+
+                    <p>
+
+                        Some memories are small,
+                        but they stay close to the heart 💗
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+            <!-- PHOTO 3 -->
+
+            <div class="photo-card">
+
+
+                <img
+                    src="{{ url_for('static', filename='images/photo3.jpeg') }}"
+                    alt="Memory 3"
+                >
+
+
+                <div class="memory-text">
+
+
+                    <h3>
+
+                        My Favourite Moment ✨
+
+                    </h3>
+
+
+                    <p>
+
+                        This picture holds
+                        a little piece of happiness 💖
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+
+
+            <!-- PHOTO 5 -->
+
+            <div class="photo-card">
+
+
+                <img
+                    src="{{ url_for('static', filename='images/photo5.jpeg') }}"
+                    alt="Memory 5"
+                >
+
+
+                <div class="memory-text">
+
+
+                    <h3>
+
+                        Forever Special 💖
+
+                    </h3>
+
+
+                    <p>
+
+                        One picture,
+                        a thousand feelings,
+                        and countless memories ✨
+
+                    </p>
+
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+    <!-- =================================
+         SECRET MESSAGE SECTION
+    ================================== -->
+
+    <section class="secret-section">
+
+
+        <div class="secret-card">
+
+
+            <div class="secret-icon">
+
+                💌✨
+
+            </div>
+
+
+            <h2>
+
+                A Little Secret For You 💖
+
+            </h2>
+
+
+            <p>
+
+                Before you scan the QR code...
+
+                there is one special message waiting
+                for you ✨
+
+            </p>
+
+
+            <!-- SECRET BUTTON -->
+
+            <button id="secretBtn"
+                    class="secret-btn">
+
+                💌 Open Your Secret Message 💌
+
+            </button>
+
+
+            <!-- SECRET MESSAGE HIDDEN -->
+
+            <div id="secretMessage"
+                 class="secret-message">
+
+
+                <h3>
+
+                    Hey Dezzu 💖
+
+                </h3>
+
+
+                <p id="typingText"></p>
+
+
+                <div class="secret-hearts">
+
+                    💕 ✨ 💖 ✨ 💕
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+
+    </section>
+
+
+    <!-- =================================
+         QR CODE SECTION
+    ================================== -->
+
+    <section class="qr-section">
+
+
+        <div class="qr-card">
+
+
+            <div class="qr-hearts">
+
+                💖 ✨ 💕 ✨ 💖
+
+            </div>
+
+
+            <h2>
+
+                One More Surprise 🎁
+
+            </h2>
+
+
+            <p>
+
+                Scan this QR code for a special
+                surprise made just for you 💕
+
+            </p>
+
+
+            <div class="qr-image-box">
+
+
+             <img
+ src="{{ url_for('static', filename='birthday_qr.png') }}">
+    alt="Birthday QR Code"
+>
+
+            </div>
+
+
+            <h3>
+
+                📱 Scan Me 💖
+
+            </h3>
+
+
+            <p class="qr-message">
+
+                Every scan hides a little bit of love ✨
+
+            </p>
+
+
+        </div>
+
+
+    </section>
+
+
+    <!-- =================================
+         MUSIC
+    ================================== -->
+
+    <audio id="birthdayMusic"
+           loop>
+
+
+        <source
+
+            src="{{ url_for('static', filename='music/birthday-song.mp3') }}"
+
+            type="audio/mpeg"
+
+        >
+
+
+    </audio>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script
+
+        src="{{ url_for('static', filename='script.js') }}">
+
+    </script>
+
+
+</body>
+
+</html>
